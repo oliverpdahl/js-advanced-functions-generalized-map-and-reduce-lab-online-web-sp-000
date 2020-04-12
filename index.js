@@ -10,12 +10,11 @@ function map(array, action){
 function reduce(array, action, startingPoint = false){
   let value
   let pointer
-  let newArray = [...array]
   if(startingPoint){
     value = startingPoint
     pointer = 0
   } else{
-    value = newArray.shift()
+    value = array[0]
     pointer = 1
   }
   for(pointer; pointer < array.length; pointer++){
